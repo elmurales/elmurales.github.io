@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+    <main class="page-content" aria-label="Content">
+        <div class="hilite"></div>
+        <div class="wrapper">
+            {{ content }}
+        </div>
+        <div class="view-more">
+            <a href="#">View More</a>
+        </div>
+        <div class="testimoni">
+            <h1 class="page-heading">Testimoni</h1>
+            <figure class="testi-pic">
+              <img src="">
+              <figcaption class="testi-info">
+                <p class="testi-name">John Doe</p>
+                <p class="testi-job">film maker</p>
+              </figcaption>
+            </figure>
+        </div>
+    </main>
+    {% include footer.html %}
+</body>
+
+</html>
