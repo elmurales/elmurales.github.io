@@ -56,11 +56,28 @@ $on-laptop:        800px;
 }
 
 @include media-query($on-palm) {
+    .site-title {
+        position: relative;
+        z-index: 1;
+    }
     .site-nav {
         background-color: #000;
         border: none;
-        .menu-icon > svg path {
-            fill: #fdfdfd;
+        border-radius: 0;
+        top: 10px;
+        width: 100%;
+        right: 0;
+        .menu-icon {
+            margin-right: 10px;
+            svg path {
+                fill: #fdfdfd;
+            }
+        }
+        .page-link {
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            margin-left: 0;
         }
     }
     .hilite {
