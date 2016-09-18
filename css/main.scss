@@ -56,6 +56,13 @@ $on-laptop:        800px;
 }
 
 @include media-query($on-palm) {
+    .site-nav {
+        background-color: #000;
+        border: none;
+        .menu-icon > svg path {
+            fill: #fdfdfd;
+        }
+    }
     .hilite {
         background-color: #f00;
         width: 100%;
@@ -93,14 +100,70 @@ $on-laptop:        800px;
     		color: #000;
     	}
     }
-    .testi-pic {
-    	img {
-    		width: 150px;
-		    height: 150px;
-		    background-color: #e6e6e6;
-		    margin: 10px auto;
-		    border-radius: 100%;
-    	}
+    .testimoni {
+        .testi-figure {
+            .testi-img {
+                width: 150px;
+                height: 150px;
+                background-color: #e6e6e6;
+                margin: 10px auto;
+                border-radius: 100%;
+            }
+            .testi-info {
+                text-align: center;
+                .testi-name {
+                    color: #000;
+                    font-weight: 700;
+                    margin-bottom: 0px;
+                    font-size: 20px;
+                }
+                .testi-job {
+                    color: #b3b3b3;
+                    font-style: italic;
+                    font-size: 18px;
+                }
+                .testi-desc{
+                    margin: 0 20px;
+                    line-height: 25px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .site-footer {
+        background-color: #000;
+        .footer-row{
+            width: 100%;
+            height: 100px;
+            .footer-col-1 {
+                width: 49%;
+                float: left;
+                .footer-heading {
+                    color: #fff;
+                }    
+            }
+            .footer-col-2 {
+                width: 50%;
+                float: right;
+                .footer-link {
+                    margin: 0;
+                    li {
+                        list-style-type: none;
+                    }
+                }
+                .footer-social-header {
+                    margin-bottom: 0;
+                }
+                .footer-social {
+                    margin: 0;
+                    li {
+                        display: inline-block;
+                        list-style-image: none;
+                        margin: 0;
+                    }
+                }
+            }
+        }
     }
 }
 
