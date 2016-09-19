@@ -78,6 +78,9 @@ $on-laptop:        800px;
             text-align: center;
             font-size: 2em;
             margin-left: 0;
+            &:focus {
+                text-decoration: none;
+            }
         }
     }
     .hilite {
