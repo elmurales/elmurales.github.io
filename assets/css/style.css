@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "FuturaBKBTBook";
+  src: url("../fonts/Futura/futura_bk_bt_book-webfont.eot");
+  src: url("../fonts/Futura/futura_bk_bt_book-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Futura/futura_bk_bt_book-webfont.woff") format("woff"), url("../fonts/Futura/futura_bk_bt_book-webfont.ttf") format("truetype"), url("../fonts/Futura/futura_bk_bt_book-webfont.svg#FuturaBKBTBook") format("svg"); }
+@font-face {
+  font-family: "FuturaBKBTBookItalic";
+  src: url("../fonts/Futura/futura_bk_bt_book_italic-webfont.eot");
+  src: url("../fonts/Futura/futura_bk_bt_book_italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Futura/futura_bk_bt_book_italic-webfont.woff") format("woff"), url("../fonts/Futura/futura_bk_bt_book_italic-webfont.ttf") format("truetype"), url("../fonts/Futura/futura_bk_bt_book_italic-webfont.svg#FuturaBKBTBookItalic") format("svg"); }
+@font-face {
+  font-family: "FuturaHVBT";
+  src: url("../fonts/Futura/futura_heavy_bt-webfont.eot");
+  src: url("../fonts/Futura/futura_heavy_bt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Futura/futura_heavy_bt-webfont.woff") format("woff"), url("../fonts/Futura/futura_heavy_bt-webfont.ttf") format("truetype"), url("../fonts/Futura/futura_heavy_bt-webfont.svg#FuturaHVBT") format("svg"); }
 .navbar {
   margin-bottom: 0; }
   .navbar.navbar-elmurales {
@@ -25,7 +37,8 @@
   background-color: #000;
   width: 100%;
   height: 100%;
-  z-index: 15; }
+  z-index: 15;
+  font-family: 'FuturaHVBT'; }
   .menu ul {
     text-align: center;
     margin: 0;
@@ -39,30 +52,35 @@
         .menu ul li a:hover {
           color: #c1272d;
           text-decoration: none; }
+        .menu ul li a:hover {
+          text-decoration: none; }
   .menu .footer-copyright-menu {
     font-size: 20px;
     margin-top: 15%;
     color: #fff; }
 
-.latest, .testimoni {
+.latest, .latest-page, .testimoni, .testimoni-page {
   font-size: 25px;
   margin: 20px 0;
-  text-align: center; }
+  text-align: center;
+  font-family: 'FuturaBKBTBook'; }
 
 .latest-figure {
   border-bottom: 1px solid #000;
   margin-bottom: 20px; }
   .latest-figure .latest-title {
     font-size: 25px;
-    font-weight: 600;
+    font-family: 'FuturaHVBT';
     min-height: 120px; }
   .latest-figure .latest-created-date {
     color: #4d4d4d;
-    margin: 0; }
+    margin-bottom: 10px;
+    font-family: 'FuturaBKBTBook'; }
 
 .viewmore {
   background-color: #e6e6e6;
-  padding: 20px 0; }
+  padding: 20px 0;
+  font-family: 'FuturaBKBTBook'; }
   .viewmore a {
     text-align: center; }
   .viewmore-link {
@@ -71,6 +89,8 @@
     margin-bottom: 0; }
     .viewmore-link:hover {
       color: #c1272d;
+      text-decoration: none; }
+    .viewmore-link:visited {
       text-decoration: none; }
 
 .testimoni-figure {
@@ -83,41 +103,50 @@
     width: 150px; }
   .testimoni-figure-name {
     font-size: 20px;
-    font-weight: 600;
+    font-family: 'FuturaHVBT';
     margin-bottom: 0; }
   .testimoni-figure-occupation {
     color: #4d4d4d;
-    font-style: italic; }
+    font-family: 'FuturaBKBTBookItalic'; }
   .testimoni-figure-text {
     font-size: 17px;
     margin: 10px auto 0;
-    width: 80%; }
+    width: 80%;
+    font-family: 'FuturaBKBTBook'; }
 
 .footer {
   background-color: #000;
   color: #fff;
   padding: 30px 0; }
   .footer-copyright {
-    font-size: 20px; }
+    font-size: 20px;
+    font-family: 'FuturaBKBTBook'; }
+    .footer-copyright span {
+      font-family: 'FuturaHVBT'; }
   .footer-link {
     font-size: 20px;
     list-style-type: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    font-family: 'FuturaBKBTBook'; }
     .footer-link a {
       color: #fff; }
       .footer-link a:hover {
         color: #c1272d;
         text-decoration: none; }
+      .footer-link a:visited {
+        text-decoration: none; }
   .footer-social {
     margin-top: 20px; }
     .footer-social-title {
-      font-size: 15px; }
+      font-size: 15px;
+      font-family: 'FuturaBKBTBook'; }
     .footer-social-link {
       margin: 0;
       padding: 0; }
       .footer-social-link li {
-        display: inline-block; }
+        display: inline-block;
+        margin-right: 5px; }
 
 .carousel-control.left {
   background-image: none; }
@@ -134,28 +163,29 @@
 .carousel-control-img {
   margin-top: 230px; }
 
-.about {
-  margin: 55px 0; }
-  .about .about-figure {
+.about, .contact {
+  margin: 173px 0; }
+  .about .about-figure, .contact .about-figure, .contact .contact-figure {
     margin-bottom: 50px;
     text-align: center; }
-    .about .about-figure .about-figure-image {
+    .about .about-figure .about-figure-image, .contact .about-figure .about-figure-image, .contact .contact-figure .about-figure-image, .contact .contact-figure .contact-figure-image {
       border-radius: 100%;
       height: 150px;
       width: 150px; }
-  .about .about-title {
+  .about .about-title, .contact .about-title, .contact .contact-title {
     font-size: 25px;
-    font-weight: 700;
+    font-family: 'FuturaHVBT';
     text-align: center; }
-  .about .about-desc {
+  .about .about-desc, .contact .about-desc {
     font-size: 17px;
     margin: 0 auto;
     text-align: center;
+    font-family: 'FuturaBKBTBook';
     width: 80%; }
 
 .back-home {
   background-color: #e6e6e6;
-  margin: 60px 0; }
+  margin: 55px 0; }
   .back-home-button {
     margin: 0;
     padding: 10px 0;
@@ -164,9 +194,35 @@
       display: inline-block;
       padding: 0 5px; }
     .back-home-button a {
-      color: #000; }
+      color: #000;
+      font-family: 'FuturaBKBTBook'; }
       .back-home-button a:hover {
         color: #c1272d;
         text-decoration: none; }
+      .back-home-button a:visited {
+        text-decoration: none; }
+
+.contact {
+  margin-bottom: 50px; }
+  .contact .contact-address {
+    text-align: center;
+    font-size: 25px; }
+    .contact .contact-address .contact-address-item {
+      font-family: 'FuturaHVBT'; }
+      .contact .contact-address .contact-address-item span {
+        font-family: 'FuturaBKBTBook'; }
+    .contact .contact-address .contact-address-item-country {
+      font-family: 'FuturaBKBTBook';
+      margin-top: 80px; }
+
+.latest-page {
+  margin-top: 80px; }
+
+.testimoni-page {
+  margin-top: 173px;
+  margin-bottom: 130px; }
+  .testimoni-page .testimoni-figure-occupation {
+    color: #4d4d4d;
+    font-family: 'FuturaBKBTBookItalic'; }
 
 /*# sourceMappingURL=style.css.map */

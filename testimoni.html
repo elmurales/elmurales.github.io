@@ -15,7 +15,7 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-    <a class="navbar-brand" href="index.html"><img src="./assets/img/LOGO.png"></a>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="./assets/img/LOGO.png"></a>
+                <a class="navbar-brand" href="index.html"><img src="./assets/img/LOGO.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -46,17 +46,44 @@
             <!-- /.navbar-collapse -->
         </div>
     </nav>
-    <div class="contact">
+    <div class="testimoni-page">
         <div class="container">
             <div class="row">
-                <figure class="contact-figure">
-                    <img class="contact-figure-image" src="./testimoni/bob.jpg">
-                </figure>
-                <p class="contact-title">Contact Us</p>
-                <div class="contact-address">
-                    <p class="contact-address-item">Email : <span>elmurales@gmail.com</span></p>
-                    <p class="contact-address-item">Phone/Whatsapp/Line : <span>+62 856 95847299</span></p>
-                    <p class="contact-address-item-country">Jakarta, Indonesia</p>
+                <div id="testimoni" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item">
+                            <div class="container">
+                                <figure class="testimoni-figure">
+                                    <img class="testimoni-figure-image" src="./testimoni/bob.jpg">
+                                    <p class="testimoni-figure-name">Bob</p>
+                                    <p class="testimoni-figure-occupation">Singer</p>
+                                    <p class="testimoni-figure-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container">
+                                <figure class="testimoni-figure">
+                                    <img class="testimoni-figure-image" src="./testimoni/tom.jpg">
+                                    <p class="testimoni-figure-name">Tom</p>
+                                    <p class="testimoni-figure-occupation">Photographer</p>
+                                    <p class="testimoni-figure-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="item active">
+                            <div class="container">
+                                <figure class="testimoni-figure">
+                                    <img class="testimoni-figure-image" src="./testimoni/john.jpg">
+                                    <p class="testimoni-figure-name">John</p>
+                                    <p class="testimoni-figure-occupation">Journalist</p>
+                                    <p class="testimoni-figure-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#testimoni" data-slide="prev"><img class="carousel-control-img" src="./assets/img/BUTTON-PREVIOUS.png"></a>
+                    <a class="right carousel-control" href="#testimoni" data-slide="next"><img class="carousel-control-img" src="./assets/img/BUTTON-NEXT.png"></a>
                 </div>
             </div>
         </div>

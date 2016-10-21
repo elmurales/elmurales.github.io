@@ -1,3 +1,27 @@
+@mixin font-face($style-name, $file, $family, $category:"") {
+    $filepath: "../fonts/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+    }
+    %#{$style-name} {
+        font: {
+            @if $category != "" {
+                family: "#{$style-name}", #{$category};
+            }
+            @else {
+                family: "#{$style-name}";
+                weight: normal;
+            }
+        }
+    }
+}
+
+@include font-face('FuturaBKBTBook', 'futura_bk_bt_book-webfont', 'Futura', 'sans');
+@include font-face('FuturaBKBTBookItalic', 'futura_bk_bt_book_italic-webfont', 'Futura', 'sans');
+@include font-face('FuturaHVBT', 'futura_heavy_bt-webfont', 'Futura', 'sans');
+
 $red: #c1272d;
 $black: #000;
 $white: #fff;
@@ -45,6 +69,7 @@ $light-grey: #e6e6e6;
   width: 100%;
   height: 100%;
   z-index: 15;
+  font-family: 'FuturaHVBT';
   ul {
     text-align: center;
     margin: 0;
@@ -58,6 +83,10 @@ $light-grey: #e6e6e6;
 
         &:hover {
           color: $red;
+          text-decoration: none;
+        }
+
+        &:hover {
           text-decoration: none;
         }
       }
@@ -74,6 +103,7 @@ $light-grey: #e6e6e6;
   font-size: 25px;
   margin: 20px 0;
   text-align: center;
+  font-family: 'FuturaBKBTBook';
 }
 
 .latest {
@@ -86,19 +116,21 @@ $light-grey: #e6e6e6;
 
   .latest-title {
     font-size: 25px;
-    font-weight: 600;
+    font-family: 'FuturaHVBT';
     min-height: 120px;
   }
 
   .latest-created-date {
     color: $dark-grey;
-    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'FuturaBKBTBook';
   }
 }
 
 .viewmore {
   background-color: $light-grey;
   padding: 20px 0;
+  font-family: 'FuturaBKBTBook';
 
   a {
     text-align: center;
@@ -112,6 +144,10 @@ $light-grey: #e6e6e6;
 
     &:hover {
       color: $red;
+      text-decoration: none;
+    }
+
+    &:visited {
       text-decoration: none;
     }
   }
@@ -135,19 +171,20 @@ $light-grey: #e6e6e6;
 
   &-name {
     font-size: 20px;
-    font-weight: 600;
+    font-family: 'FuturaHVBT';
     margin-bottom: 0;
   }
 
   &-occupation {
     color: $dark-grey;
-    font-style: italic;
+    font-family: 'FuturaBKBTBookItalic';
   }
 
   &-text {
     font-size: 17px;
     margin: 10px auto 0;
     width: 80%;
+    font-family: 'FuturaBKBTBook';
   }
 }
 
@@ -158,6 +195,10 @@ $light-grey: #e6e6e6;
 
   &-copyright {
     font-size: 20px;
+    font-family: 'FuturaBKBTBook';
+    span {
+      font-family: 'FuturaHVBT';
+    }
   }
 
   &-link {
@@ -165,12 +206,16 @@ $light-grey: #e6e6e6;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    font-family: 'FuturaBKBTBook';
 
     a {
       color: $white;
 
       &:hover {
         color: $red;
+        text-decoration: none;
+      }
+      &:visited {
         text-decoration: none;
       }
     }
@@ -181,6 +226,7 @@ $light-grey: #e6e6e6;
 
     &-title {
       font-size: 15px;
+      font-family: 'FuturaBKBTBook';
     }
 
     &-link {
@@ -189,6 +235,7 @@ $light-grey: #e6e6e6;
 
       li {
         display: inline-block;
+        margin-right: 5px;
       }
     }
   }
@@ -222,7 +269,7 @@ $light-grey: #e6e6e6;
 
 // About
 .about {
-  margin: 55px 0;
+  margin: 173px 0;
 
   .about-figure {
     margin-bottom: 50px;
@@ -237,7 +284,7 @@ $light-grey: #e6e6e6;
 
   .about-title {
     font-size: 25px;
-    font-weight: 700;
+    font-family: 'FuturaHVBT';
     text-align: center;
   }
 
@@ -245,6 +292,7 @@ $light-grey: #e6e6e6;
     font-size: 17px;
     margin: 0 auto;
     text-align: center;
+    font-family: 'FuturaBKBTBook';
     width: 80%;
   }
 
@@ -252,7 +300,7 @@ $light-grey: #e6e6e6;
 
 .back-home {
   background-color: $light-grey;
-  margin: 60px 0;
+  margin: 55px 0;
 
   &-button {
     margin: 0;
@@ -267,11 +315,67 @@ $light-grey: #e6e6e6;
 
     a {
       color: $black;
+      font-family: 'FuturaBKBTBook';
 
       &:hover {
         color: $red;
         text-decoration: none;
       }
+
+      &:visited {
+        text-decoration: none;
+      }
     }
   }
 }
+
+// CONTACT
+.contact {
+  @extend .about;
+  margin-bottom: 50px;
+
+  .contact-figure {
+    @extend .about-figure;
+
+    .contact-figure-image {
+      @extend .about-figure-image;
+    }
+  }
+
+  .contact-title {
+    @extend .about-title;
+  }
+
+  .contact-address {
+    text-align: center;
+    font-size: 25px;
+    .contact-address-item {
+      font-family: 'FuturaHVBT';
+      span {
+        font-family: 'FuturaBKBTBook';
+      }
+    }
+    .contact-address-item-country {
+      font-family: 'FuturaBKBTBook';
+      margin-top: 80px;
+    }
+  }
+}
+
+// LATEST PROJECT
+.latest-page {
+  @extend .latest;
+  margin-top: 80px;
+}
+
+// TESTIMONI
+.testimoni-page {
+  @extend .testimoni;
+  margin-top: 173px;
+  margin-bottom: 130px;
+  .testimoni-figure-occupation {
+    color: $dark-grey;
+    font-family: 'FuturaBKBTBookItalic';
+  }
+}
+
