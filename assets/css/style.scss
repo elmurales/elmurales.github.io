@@ -120,6 +120,12 @@ $light-grey: #e6e6e6;
     font-size: 25px;
     font-family: 'FuturaHVBT';
     min-height: 120px;
+    a {
+      color: $black;
+      &:hover {
+        color: $red;
+      }
+    }
   }
 
   .latest-created-date {
