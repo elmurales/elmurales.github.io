@@ -381,3 +381,36 @@ $light-grey: #e6e6e6;
   }
 }
 
+// POST
+.post {
+  margin-top: 80px;
+  &-date {
+    color: $dark-grey;
+    margin-bottom: 10px;
+    font-family: 'FuturaBKBTBook';
+    font-size: 18px;
+  }
+  &-title {
+    font-size: 50px;
+    font-family: 'FuturaHVBT';
+    color: $black;
+    margin-bottom: 0;
+  }
+  &-place {
+    font-size: 25px;
+    font-family: 'FuturaBKBTBook';
+    color: $dark-grey;
+  }
+  &-size-label{
+    font-family: 'FuturaHVBT';
+    color: $black;
+    margin-bottom: 0;
+    font-size: 18px;  
+  }
+  &-size-value{
+    font-family: 'FuturaBKBTBook';
+    color: $dark-grey;
+    font-size: 18px;  
+  }
+}
+

@@ -15,7 +15,7 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 
 <body>
@@ -29,12 +29,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="./assets/img/LOGO.png"></a>
+                <a class="navbar-brand" href="/"><img src="{{ "/assets/img/LOGO.png" | relative_url }}"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><img class="hidden-xs menu-burger" src="./assets/img/MENU-ICON.png"></li>
+                    <li><img class="hidden-xs menu-burger" src="{{ "/assets/img/MENU-ICON.png" | relative_url }}"></li>
                     {% for node in site.pages %}
                         {% if node.title == "index" %}
                             <li><a class="xs-menu hidden-md hidden-lg" href="{{node.permalink}}">{{node.title}}</a></li>
