@@ -26,7 +26,9 @@
                 <ul>
                 {% for node in site.pages %}
                     {% if node.title != "index" %}
+                        {%if forloop.index == node.index %}
                         <li><a href="{{node.permalink}}">{{node.title}}</a></li>
+                        {%endif%}
                     {% endif %}
                 {% endfor %}
                     <li><a href="#">Instagram</a></li>
