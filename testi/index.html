@@ -1,0 +1,45 @@
+---
+layout: default
+title: Testimonial
+permalink: /testimonial
+---
+    <div class="testimoni-page">
+        <div class="container">
+            <div class="row">
+                <div id="testimoni" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                    {% for testi in site.testimoni %}
+                        {% if forloop.first == true%} 
+                            {% assign active = "active" %}
+                        {% else %}
+                            {% assign active = "" %}
+                        {% endif %}
+                        <div class="item {{active}}">
+                            <div class="container">
+                                <figure class="testimoni-figure">
+                                    <img class="testimoni-figure-image" src="{{testi.photo}}">
+                                    <p class="testimoni-figure-name">{{testi.name}}</p>
+                                    <p class="testimoni-figure-occupation">{{testi.occupation}}</p>
+                                    <p class="testimoni-figure-text">{{testi.testimonial}}</p>
+                                </figure>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                    <a class="left carousel-control" href="#testimoni" data-slide="prev"><img class="carousel-control-img" src="./assets/img/BUTTON-PREVIOUS.png"></a>
+                    <a class="right carousel-control" href="#testimoni" data-slide="next"><img class="carousel-control-img" src="./assets/img/BUTTON-NEXT.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="back-home">
+        <div class="container">
+            <div class="row">
+                <ul class="back-home-button">
+                    <li><img src="./assets/img/BUTTON-PREVIOUS.png"></li>
+                    <li><a href="/">Back To Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
